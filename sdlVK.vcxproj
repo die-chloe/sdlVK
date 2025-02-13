@@ -179,9 +179,6 @@
     <ClCompile Include="src\sdlvk.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\sdlvk.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="src\shaders\PixelShader.hlsl">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Command) -T ps_6_6</Command>

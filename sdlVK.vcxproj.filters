@@ -24,11 +24,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\sdlvk.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="src\shaders\VertexShader.hlsl">
       <Filter>Shaders</Filter>
     </CustomBuild>
