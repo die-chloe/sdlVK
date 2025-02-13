@@ -140,6 +140,16 @@
       <DisableOptimizations>false</DisableOptimizations>
       <EnableDebuggingInformation>false</EnableDebuggingInformation>
     </FxCompile>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep />
+    <CustomBuild>
+      <Command>$(VULKAN_SDK)\bin\dxc -spirv -E main %(Identity) -Fo $(OutDir)shaders\%(Filename).spv</Command>
+      <Outputs>$(OutDir)shaders\%(Filename).spv;%(Outputs)</Outputs>
+      <TreatOutputAsContent>true</TreatOutputAsContent>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -170,9 +180,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\sdlvk.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\VertexShader.spv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

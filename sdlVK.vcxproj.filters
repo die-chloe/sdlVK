@@ -15,6 +15,7 @@
     </Filter>
     <Filter Include="Source Files\Shaders">
       <UniqueIdentifier>{3c22b45e-afa3-4487-9f6f-43151da434f8}</UniqueIdentifier>
+      <Extensions>hlsl</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,10 +27,5 @@
     <ClInclude Include="src\sdlvk.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\VertexShader.spv">
-      <Filter>Source Files\Shaders</Filter>
-    </None>
   </ItemGroup>
 </Project>
