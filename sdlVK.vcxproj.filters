@@ -16,6 +16,10 @@
     <Filter Include="Source Files\Shaders">
       <UniqueIdentifier>{3c22b45e-afa3-4487-9f6f-43151da434f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Shaders\src">
+      <UniqueIdentifier>{3f26f32e-90b5-4da1-a6ca-1d7c34693f1b}</UniqueIdentifier>
+      <Extensions>vert;frag;hlsl</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\sdlvk.cpp">
@@ -28,8 +32,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\VertexShader.spv">
-      <Filter>Source Files\Shaders</Filter>
-    </None>
+    <CustomBuild Include="src\shaders\src\PixelShader.hlsl">
+      <Filter>Source Files\Shaders\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\src\VertexShader.hlsl">
+      <Filter>Source Files\Shaders\src</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
