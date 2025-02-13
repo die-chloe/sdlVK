@@ -181,6 +181,16 @@
   <ItemGroup>
     <ClInclude Include="src\sdlvk.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\shaders\PixelShader.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Command) -T ps_6_6</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\VertexShader.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Command) -T vs_6_6</Command>
+    </CustomBuild>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
